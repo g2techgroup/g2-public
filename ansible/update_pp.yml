@@ -1,0 +1,10 @@
+---
+- name: update piedpiper hosts
+  ### The hosts line dictates what servers to work on. I'm keying any servers with security group, "piedpiper*"
+  ### This is the key. The cloud formation stack name has to be named piedpiper all lower case for this section to work
+  ### Since the name of the security group is dependent on stack name. 
+  hosts: security_group_piedpiper*
+  vars:
+    keyname: piedpiper
+  roles: 
+    - update_pp

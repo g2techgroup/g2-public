@@ -1,0 +1,10 @@
+---
+- name: launch cf
+  cloudformation: 
+    stack_name: piedpiper
+    state: present
+    region: us-east-1
+    template: "/opt/ansible/playbooks/automation/aws/piedpiper_template.json"
+    template_parameters: 
+      KeyName: "{{keyname}}"
+      InstanceType: "{{instancetype}}"

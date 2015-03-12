@@ -1,0 +1,10 @@
+---
+- name: create stack
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    keyname: piedpiper
+    instancetype: m1.small
+  roles: 
+    - create-stack    
