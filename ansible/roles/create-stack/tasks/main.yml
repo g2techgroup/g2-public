@@ -8,3 +8,6 @@
     template_parameters: 
       KeyName: "{{keyname}}"
       InstanceType: "{{instancetype}}"
+    register: stack
+  - name: show stack outputs
+    debug: msg="My stack outputs are {{stack.stack_outputs}}"
